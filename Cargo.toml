@@ -13,6 +13,7 @@ readme = "README.md"
 [dev-dependencies]
 criterion = { version = "0.5.1", features = ["html_reports"] }
 rand = "0.8.5"
+ntest = "0.9"
 
 [dependencies]
 serde = { version = "1.0.151", optional = true, features = ["derive"] }

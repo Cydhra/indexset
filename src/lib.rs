@@ -4409,4 +4409,12 @@ mod tests {
             assert_eq!(expected_right, actual_right)
         }
     }
+
+    #[test]
+    #[ntest::timeout(1000)]
+    fn test_high_index() {
+        // regression test testing for an endless loop when accessing out of bounds with high indices
+        let btree: BTreeSet<usize> = BTreeSet::new();
+        assert_eq!(btree.get_index(1 + DEFAULT_INNER_SIZE), None);
+    }
 }
